@@ -13,6 +13,9 @@ import Churches from './pages/Churches';
 
 import "./scss/App.scss";
 import Messages from './pages/Messages';
+import ChurchEdit from './pages/ChurchEdit';
+import AddChurch from './pages/AddChurch';
+import AddParish from './pages/AddParish';
 
 const App = () => {
   return (
@@ -21,7 +24,10 @@ const App = () => {
         <Route element={<AuthLayout />}>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Dashboard />} />
-            <Route path="/churches" element={<Churches />} />
+            <Route path="/onboarding" element={<Churches />} />
+            <Route path="/onboarding/addchurch" element={<AddChurch />} />
+            <Route path="/onboarding/addparish" element={<AddParish />} />
+            <Route path="/onboarding/:onboardingId" element={<ChurchEdit />} />
             <Route path='/messages' element={<Messages />} />
           </Route>
         </Route>

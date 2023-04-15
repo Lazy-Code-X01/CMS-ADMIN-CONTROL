@@ -6,10 +6,10 @@ const sidebarNav = [
       // text: "Dashboard",
     },
     {
-      link: "/churches",
-      section: "churches",
+      link: "/onboarding",
+      section: "onboarding",
       icon: "bxs:church",
-      text: "churches",
+      text: "onboarding",
     },
     {
       link: "/messages",

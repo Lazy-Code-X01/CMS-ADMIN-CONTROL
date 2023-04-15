@@ -34,7 +34,7 @@ function Sidebar() {
       const activeItem = sidebarNav.findIndex((item) => item.section === curPath);
   
       setActiveIndex(curPath.length === 0 ? 0 : activeItem);
-      console.log(activeItem)
+      // console.log(activeItem)
     }, [location]);
     
     return (
