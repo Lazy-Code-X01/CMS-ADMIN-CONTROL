@@ -13,6 +13,7 @@ interface Props {
   ref?: HTMLInputElement;
   readonly?: boolean;
   autocomplete?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 interface IImperativeHandler {
