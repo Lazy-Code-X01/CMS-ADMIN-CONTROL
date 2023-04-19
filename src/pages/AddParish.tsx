@@ -1,8 +1,12 @@
 import React from 'react'
+import ParishAdd from '../components/add/ParishAdd'
 
 const AddParish = () => {
   return (
-    <div>AddParish</div>
+    <section>
+    <h2 className='title'>Add Parish</h2>
+    <ParishAdd />
+  </section>
   )
 }
 

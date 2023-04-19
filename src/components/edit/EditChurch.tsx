@@ -19,14 +19,14 @@ const EditChurch: React.FC<{ datas?: Props }> = (props) => {
     <div className={classes.edit__left}>
         <Card>
             <div className={classes.img_wrapper}>
-                {/* <img
+                <img
                 className={classes.pic}
                 src={props.datas?.pic}
-                alt="product pic"
-                /> */}
+                alt="church profile img"
+                />
             </div>
 
-            <div className={classes.product__info}>
+            <div className={classes.card__info}>
                 <div>
                     <div className={classes.title}>Church Name</div>
                     <div className={classes.value}>
@@ -70,7 +70,7 @@ const EditChurch: React.FC<{ datas?: Props }> = (props) => {
     
     <div className={classes.edit__right}>
         <Card>
-            <div className={classes.product__edit}>
+            <div className={classes.card__edit}>
                 <h3 className={classes.subTitle}>
                     <Icon icon="fluent:edit-16-regular" width="24" />
                     {'Edit'}
@@ -88,14 +88,13 @@ const EditChurch: React.FC<{ datas?: Props }> = (props) => {
                         accept="image/png, image/jpeg"
                         />
                     </div>
-                    {/* <img
+                    <img
                         className={classes.pic}
-                        src={props.product?.pic}
-                        alt="product pic"
-                    /> */}
+                        src={props.datas?.pic}
+                        alt="church profile img"
+                    />
                 </div>
                 
-                            
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();

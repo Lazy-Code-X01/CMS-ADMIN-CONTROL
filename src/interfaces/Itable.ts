@@ -34,7 +34,7 @@ export interface IProductsTable {
 
 export interface IOveralTable {
   id: number | string;
-  // pic: string;
+  pic: string;
   name: string;
   pastor: string;
   city: string;

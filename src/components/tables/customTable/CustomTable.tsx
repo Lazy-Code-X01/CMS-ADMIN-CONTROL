@@ -23,6 +23,11 @@ const CustomTable: React.FC<Props> = (props) => {
           
           <td>{item.id}</td>
           <td className={classes.product_name}>
+          <img
+              className={classes.product_img}
+              src={item.pic}
+              alt="user avatar"
+            />
             {item.name}
           </td>
           <td>{item.pastor}</td>

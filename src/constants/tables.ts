@@ -257,7 +257,7 @@ export const data = [
     city: "Los Angeles",
     phone: "555-5678",
     category: "parish",
-    pic: "https://images.unsplash.com/photo-1515162305285-0293e4767cc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTM1MzE3Mg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
+    pic: "https://images.unsplash.com/photo-1555696958-c5049b866f6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTMyMDEzMg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
   },
   {
     id: 3,
@@ -266,7 +266,7 @@ export const data = [
     city: "Chicago",
     phone: "555-9012",
     category: "church",
-    pic: "https://images.unsplash.com/photo-1515162305285-0293e4767cc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTM1MzE3Mg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
+    pic: "https://images.unsplash.com/photo-1548625149-fc4a29cf7092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTU4ODg3OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
   },
   {
     id: 4,
@@ -275,7 +275,7 @@ export const data = [
     city: "Houston",
     phone: "555-3456",
     category: "parish",
-    pic: "https://images.unsplash.com/photo-1515162305285-0293e4767cc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTM1MzE3Mg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
+    pic: "https://images.unsplash.com/photo-1499652848871-1527a310b13a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTM2OTg0MA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
   },
   {
     id: 5,
@@ -284,7 +284,7 @@ export const data = [
     city: "Philadelphia",
     phone: "555-7890",
     category: "church",
-    pic: "https://images.unsplash.com/photo-1515162305285-0293e4767cc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTM1MzE3Mg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
+    pic: "https://images.unsplash.com/photo-1507692049790-de58290a4334?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTQwNTkyOQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
   },
   {
     id: 6,
@@ -292,7 +292,8 @@ export const data = [
     pastor: "Rev. Alice Kim",
     city: "Phoenix",
     phone: "555-1235",
-    category: "parish"
+    category: "parish",
+    pic: "https://images.unsplash.com/photo-1515162305285-0293e4767cc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTM1MzE3Mg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
   },
   {
     id: 7,
@@ -300,7 +301,8 @@ export const data = [
     pastor: "Rev. David Johnson",
     city: "Atlanta",
     phone: "555-6789",
-    category: "church"
+    category: "church",
+    pic: "https://images.unsplash.com/photo-1555696958-c5049b866f6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTMyMDEzMg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
   },
   {
     id: 8,
@@ -308,7 +310,8 @@ export const data = [
     pastor: "Rev. Sarah Lee",
     city: "Dallas",
     phone: "555-2345",
-    category: "parish"
+    category: "parish",
+    pic: "https://images.unsplash.com/photo-1548625149-fc4a29cf7092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTU4ODg3OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
   },
   {
     id: 9,
@@ -316,7 +319,8 @@ export const data = [
     pastor: "Rev. Andrew Davis",
     city: "Seattle",
     phone: "555-6789",
-    category: "church"
+    category: "church",
+    pic: "https://images.unsplash.com/photo-1499652848871-1527a310b13a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTM2OTg0MA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
   },
   {
     id: 10,
@@ -324,7 +328,8 @@ export const data = [
     pastor: "Rev. Emily Johnson",
     city: "Minneapolis",
     phone: "555-1234",
-    category: "parish"
+    category: "parish",
+    pic: "https://images.unsplash.com/photo-1507692049790-de58290a4334?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTQwNTkyOQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
   },
   {
     id: 11,
@@ -332,7 +337,8 @@ export const data = [
     pastor: "Rev. Michael Kim",
     city: "Boston",
     phone: "555-5678",
-    category: "church"
+    category: "church",
+    pic: "https://images.unsplash.com/photo-1515162305285-0293e4767cc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTM1MzE3Mg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
   },
   {
     id: 12,
@@ -340,7 +346,8 @@ export const data = [
     pastor: "Rev. Maria Hernandez",
     city: "Miami",
     phone: "555-9012",
-    category: "parish"
+    category: "parish",
+    pic: "https://images.unsplash.com/photo-1515162305285-0293e4767cc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTM1MzE3Mg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
   },
   {
     id: 13,
@@ -348,6 +355,7 @@ export const data = [
     pastor: "Rev. James Lee",
     city: "San Francisco",
     phone: "555-3456",
-    category: "church"
+    category: "church",
+    pic: "https://images.unsplash.com/photo-1499652848871-1527a310b13a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTM2OTg0MA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
   }
 ] 
