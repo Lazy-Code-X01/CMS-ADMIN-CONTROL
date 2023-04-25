@@ -72,6 +72,7 @@
   }
 }
 .upload_circle_temp {
+  position: relative;
   @include flex();
   align-self: center;
   width: 200px;
@@ -86,6 +87,14 @@
   @media screen and (max-width: 576px) {
     width: 150px;
     height: 150px;
+  }
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
   }
 }
 

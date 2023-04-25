@@ -37,10 +37,10 @@ const ModalOverlay: React.FC<IModal> = (props) => {
         </div>
         <footer className={classes.actions}>
           <Button outline={true} onClick={props.onConfirm}>
-            {t("cancel")}
+            {"Cancel"}
           </Button>
           <button className={classes.delete} onClick={props.onConfirm}>
-            {t("delete")}
+            {"Delete"}
           </button>
         </footer>
       </div>

@@ -21,7 +21,7 @@ const CustomTable: React.FC<Props> = (props) => {
         <tr key={index}>
           
           
-          <td>{item.id}</td>
+          <td>{item.id}</td> 
           <td className={classes.product_name}>
           <img
               className={classes.product_img}
@@ -110,8 +110,8 @@ const CustomTable: React.FC<Props> = (props) => {
       {/* modal for delete customer and product case*/}
       {showModal ? (
         <Modal
-          title={t("deleteCustomer")}
-          message={`${t("modalMessage")}`}
+          title={"Delete Subscriber"}
+          message={`${"Delete this subscriber from the table"}`}
           onConfirm={showModalHandler}
         />
       ) : null}

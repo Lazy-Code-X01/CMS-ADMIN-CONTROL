@@ -49,6 +49,13 @@ const ParishAdd = () => {
                     <p>Preview Changes</p>
                     <div className={`${classes.upload_circle_temp}`}>
                         <Icon icon="akar-icons:cloud-upload" />
+                        
+                        <img 
+                            className={classes.pic}
+                            //@ts-ignore
+                            src={imageUrl ? URL.createObjectURL(imageUrl): ""}  
+                            alt="" 
+                        />
                     </div>
                     
                     <div className={classes.card__info}>
@@ -99,17 +106,20 @@ const ParishAdd = () => {
                         </div>
                         <div className={classes.file_input_control}>
                             <input
-                            className={classes.file_input}
-                            type="file"
-                            id="pic"
-                            name="pic"
-                            accept="image/png, image/jpeg"
+                                className={classes.file_input}
+                                type="file"
+                                id="pic"
+                                name="pic"
+                                accept="image/png, image/jpeg"
+                                // @ts-ignore
+                                onChange={(e)=> setImageUrl(e.target.files[0])}
                             />
                         </div>
                         <img
                             className={classes.pic}
-                            // src={props.datas?.pic}
-                            alt="church profile img"
+                            //@ts-ignore
+                            src={imageUrl ? URL.createObjectURL(imageUrl): ""}
+                            alt=""
                         />
                     </div>
     

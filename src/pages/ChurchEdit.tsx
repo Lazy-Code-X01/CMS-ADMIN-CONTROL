@@ -11,7 +11,7 @@ import { data } from "../constants/tables";
 const ChurchEdit = () => {
   const params = useParams();
   let { onboardingId } = params
-  // console.log(onboardingId);
+  console.log(onboardingId);
 
   let churchInfo: IOveralTable = data.filter(
     (item) => item.id.toString() === onboardingId 
