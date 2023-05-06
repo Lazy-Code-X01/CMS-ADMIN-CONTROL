@@ -37,7 +37,7 @@ const Chart = () => {
     
     return(
         <section className={classes.chart}>
-        <p className="subTitle">Analysis <span style={{fontSize: '12px'}}>(over the last 6 months)</span></p>
+        <p className="subTitle">Analysis <span style={{fontSize: '12px'}}>(Over the Last 6 Months)</span></p>
         <div className={classes.charts__container}>
           <div className={classes.charts__wrapper}>
             <Card>

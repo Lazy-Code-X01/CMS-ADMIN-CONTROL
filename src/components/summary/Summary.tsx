@@ -7,19 +7,19 @@ import { IsummData } from "../../interfaces/IsummData";
 const summaryData: IsummData[] = [
   {
     value: '2,450',
-    desc: "total number of churhces",
+    desc: "Total No. of Churhces",
   },
   {
     value: '4,450',
-    desc: "total number of parish",
+    desc: "Total Number of Parish",
   },
   {
     value: '20',
-    desc: "month onboarding",
+    desc: "Month Onboarding",
   },
   {
     value: '40',
-    desc: "total deactivated",
+    desc: "Total Deactivated",
   },
 ];
 
