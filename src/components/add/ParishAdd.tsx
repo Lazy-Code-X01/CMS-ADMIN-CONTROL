@@ -17,28 +17,46 @@ const ParishAdd = () => {
     // ============== using thesame styles as EditChurch.tsx because the layout are similar {so other devs wont get confused with the class names not corresponding}
     // set the states
     const [imageUrl, setImageUrl] = useState('')
-    const [parishName, setParishName] = useState('')
-    const [category, setCategory] = useState('Parish')
-    const [pastor, setPastor] = useState('')
-    const [city, setCity] = useState('')
-    const [contact, setContact] = useState('')
+    const [parishName, setParishName] = useState('');
+    const [category, setCategory] = useState('Parish');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [parishPhoneNumber, setParishPhoneNumber] = useState('');
+    const [state, setState] = useState('');
+    const [country, setCountry] = useState('');
+    const [nearestBusStop, setNearestBusStop] = useState('');
+    const [parishAddress, setParishAddress] = useState('');
+
+
     // set the functions
-    const parishNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+
+    const parisshNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setParishName(e.target.value);
     }
     const categoryHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setCategory(e.target.value);
     }
-    const pastorHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setPastor(e.target.value);
+    const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(e.target.value);
     }
-    const cityHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setCity(e.target.value);
+    const phoneHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setPhone(e.target.value);
     }
-    const contactHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setContact(e.target.value);
+    const ParishPhoneNumberHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setParishPhoneNumber(e.target.value);
     }
-
+    const stateHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setState(e.target.value);
+    }
+    const countryHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setCountry(e.target.value);
+    }
+    const nearestBusStopHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setNearestBusStop(e.target.value);
+    }
+    const ParishAddressHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setParishAddress(e.target.value);
+    }
 
 
     return (
@@ -58,38 +76,63 @@ const ParishAdd = () => {
                         />
                     </div>
                     
+                
                     <div className={classes.card__info}>
-                        <div>
-                            <div className={classes.title}>Church Name</div>
-                            <div className={classes.value}>
-                                {parishName ? parishName : 'Undefined'}
-                            </div>
-                        </div>
-                        <div>
-                            <div className={classes.title}>Category</div>
-                            <div className={classes.value}>
-                                {category ? category : 'Undefined'}    
-                            </div>
-                        </div>
-                        <div>
-                            <div className={classes.title}>Pastor Name</div>
-                            <div className={classes.value}>
-                                {pastor ? pastor : 'Undefined'}
-                            </div>
-                        </div>
-                        <div>
-                            <div className={classes.title}>City</div>
-                            <div className={classes.value}>
-                                {city ? city : 'Undefined'}    
-                            </div>
-                        </div>
-                        <div>
-                            <div className={classes.title}>Contact</div>
-                            <div className={classes.value}>
-                                {contact ? contact : 'Undefined'}
-                            </div>
+                    <div>
+                        <div className={classes.title}>Name of Parish</div>
+                        <div className={classes.value}>
+                            {parishName ? parishName : 'Undefined'}
                         </div>
                     </div>
+                    <div>
+                        <div className={classes.title}>Category</div>
+                        <div className={classes.value}>
+                            {category ? category : 'Undefined'}    
+                        </div>
+                    </div>
+                    <div>
+                        <div className={classes.title}>Email Address</div>
+                        <div className={classes.value}>
+                            {email ? email : 'Undefined'}
+                        </div>
+                    </div>
+                    <div>
+                        <div className={classes.title}>Phone Number</div>
+                        <div className={classes.value}>
+                            {phone ? phone : 'Undefined'}    
+                        </div>
+                    </div>
+                    <div>
+                        <div className={classes.title}>Parish Phone Number</div>
+                        <div className={classes.value}>
+                            {parishPhoneNumber ? parishPhoneNumber : 'Undefined'}
+                        </div>
+                    </div>
+                    <div>
+                        <div className={classes.title}>State</div>
+                        <div className={classes.value}>
+                            {state ? state : 'Undefined'}
+                        </div>
+                    </div>
+                    <div>
+                        <div className={classes.title}>Country</div>
+                        <div className={classes.value}>
+                            {country ? country : 'Undefined'}
+                        </div>
+                    </div>
+                    <div>
+                        <div className={classes.title}>Nearest Bus Stop</div>
+                        <div className={classes.value}>
+                            {nearestBusStop ? nearestBusStop : 'Undefined'}
+                        </div>
+                    </div>
+                    <div>
+                        <div className={classes.title}>Parish Address</div>
+                        <div className={classes.value}>
+                            {parishAddress ? parishAddress : 'Undefined'}
+                        </div>
+                    </div>
+                </div>
                 </Card>
             </div>
     
@@ -129,65 +172,106 @@ const ParishAdd = () => {
                         }}
                     >
                         <div className={classes.form__control}>
-                            <label htmlFor="Name">Name</label>
-                            <input
-                                id="Name"
-                                type='text'
-                                placeholder='Enter church name'
-                                value={parishName}
-                                onChange={parishNameHandler}
-                            />
-                        </div>
-                        {/* th value of this category is going to be based on dynamicity */}
-                        <div className={classes.form__control}>
-                            <label htmlFor="Category">Category</label>
-                            <input
-                                id="Category"
-                                type='text'
-                                placeholder='Category '
-                                value={category}
-                                onChange={categoryHandler}
-                                readOnly
-                            />
-                        </div>
-                        <div className={classes.form__control}>
-                            <label htmlFor="Pastor">Pastor</label>
-                            <input
-                                id="Pastor"
-                                type='text'
-                                placeholder='Enter pastor name '
-                                value={pastor}
-                                onChange={pastorHandler}
-                            />
-                        </div>
-                        <div className={classes.form__control}>
-                            <label htmlFor="City">City</label>
-                            <input
-                                id="City"
-                                type='text'
-                                placeholder='Enter city '
-                                value={city}
-                                onChange={cityHandler}
-                            />
-                        </div>
-                        <div className={classes.form__control}>
-                            <label htmlFor="Contact">Contact</label>
-                            <input
-                                id="Contact"
-                                type='text'
-                                placeholder='Enter contact info '
-                                value={contact}
-                                onChange={contactHandler}
-                            />
-                        </div>
-                    <div className={classes.btn__wrapper}>    
-                        <Link to="/onboarding">
-                            <Button type="submit">{"Upload"}</Button>
-                        </Link>
-                        <Link to="/onboarding">
-                            <Button outline={true}>{"Cancel"}</Button>
-                        </Link>
+                        <label htmlFor="Name">Name of Parish</label>
+                        <input
+                            id="Name of Parish"
+                            type='text'
+                            placeholder='Enter church name'
+                            value={parishName}
+                            onChange={parisshNameHandler}
+                        />
                     </div>
+                    {/* th value of this category is going to be based on dynamicity */}
+                    <div className={classes.form__control}>
+                        <label htmlFor="Category">Category</label>
+                        <input
+                            id="Category"
+                            type='text'
+                            placeholder='Category '
+                            value={category}
+                            onChange={categoryHandler}
+                            readOnly
+                        />
+                    </div>
+                    <div className={classes.form__control}>
+                        <label htmlFor="Pastor">Email Address</label>
+                        <input
+                            id="Email Address"
+                            type='text'
+                            placeholder='Enter pastor name '
+                            value={email}
+                            onChange={emailHandler}
+                        />
+                    </div>
+                    <div className={classes.form__control}>
+                        <label htmlFor="City">Phone Number</label>
+                        <input
+                            id="City"
+                            type='number'
+                            placeholder='Enter phone number '
+                            value={phone}
+                            onChange={phoneHandler}
+                        />
+                    </div>
+                    <div className={classes.form__control}>
+                        <label htmlFor="Contact">Parish Phone Number</label>
+                        <input
+                            id="Parish Phone Number"
+                            type='number'
+                            placeholder='Enter church contact info '
+                            value={parishPhoneNumber}
+                            onChange={ParishPhoneNumberHandler}
+                        />
+                    </div>
+                    <div className={classes.form__control}>
+                        <label htmlFor="Contact">State</label>
+                        <input
+                            id="State"
+                            type='text'
+                            placeholder='Enter your state'
+                            value={state}
+                            onChange={stateHandler}
+                        />
+                    </div>
+                    <div className={classes.form__control}>
+                        <label htmlFor="Contact">Country</label>
+                        <input
+                            id="Country"
+                            type='text'
+                            placeholder='Enter your Country'
+                            value={country}
+                            onChange={countryHandler}
+                        />
+                    </div>
+                    <div className={classes.form__control}>
+                        <label htmlFor="Contact">Nearest Bus Stop</label>
+                        <input
+                            id="Nearest Bus Stop"
+                            type='text'
+                            placeholder='Enter your nearest bus stop'
+                            value={nearestBusStop}
+                            onChange={nearestBusStopHandler}
+                        />
+                    </div>
+                    <div className={classes.form__control}>
+                        <label htmlFor="Contact">Address</label>
+                        <input
+                            id="Address"
+                            type='text'
+                            placeholder='Enter your parish Address'
+                            value={parishAddress}
+                            onChange={ParishAddressHandler}
+                        />
+                    </div>
+
+                        <div className={classes.btn__wrapper}>    
+                            <Link to="/onboarding">
+                                <Button type="submit">{"Upload"}</Button>
+                            </Link>
+                            <Link to="/onboarding">
+                                <Button outline={true}>{"Cancel"}</Button>
+                            </Link>
+                        </div>
                     </form>
                 </div>
             </Card>
