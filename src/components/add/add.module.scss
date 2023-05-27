@@ -1,4 +1,5 @@
 @use "../../scss/abstracts/" as *;
+
 // ------------
 .form__control {
   position: relative;
@@ -28,10 +29,41 @@
       min-width: auto;
     }
   }
+
 }
-
-
-
+.btn__wrapper{
+  margin-bottom: 1rem;
+  button{
+    font: inherit;
+    border-radius: $smallBorderRadius;
+    padding: 0.8rem 3rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    min-width: 290px; 
+  
+    &.outline {
+      background-color: transparent;
+      border: 1px solid #000080;
+      color: var(--text-color);
+    }
+  
+    &.button {
+      border: none;
+      background: #000080;
+      color: gainsboro;
+    
+      &:hover,
+      &:active {
+        background-color: darken(#000080, 10%);
+      }
+    
+      &:focus {
+        outline: none;
+      }
+    }
+    
+  }
+}
 
 .add__container {
   @include flex();
@@ -238,64 +270,3 @@
       margin-bottom: 14rem;
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .upload_circle_temp {
-//     @include flex();
-//     align-self: center;
-//     width: 200px;
-//     height: 200px;
-//     border-radius: 50%;
-//     overflow: hidden;
-//     box-shadow: $mainBoxShadow;
-//     font-size: 4rem;
-//     color: #ebebeb;
-//     background-color: rgba(0, 0, 0, 0.4);
-    
-//     @media screen and (max-width: 576px) {
-//       width: 150px;
-//       height: 150px;
-//     }
-// }

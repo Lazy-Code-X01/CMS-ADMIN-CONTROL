@@ -8,14 +8,21 @@ import classes from './add.module.scss'
 
 import { Icon } from "@iconify/react";
 import Button from "../UI/button/Button";
-import Input from "../UI/input/Input";
 import Card from "../UI/card/Card";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+
+interface Church {
+    churchId: string;
+    name: string;
+}  
 
 const ParishAdd = () => {
     // ============== using thesame styles as EditChurch.tsx because the layout are similar {so other devs wont get confused with the class names not corresponding}
-    // ============== using thesame styles as EditChurch.tsx because the layout are similar {so other devs wont get confused with the class names not corresponding}
-    // set the states
+    
+    // set the stat2es
+    const [data, setData] = useState<Church[]>([]); // for the api get request
     const [imageUrl, setImageUrl] = useState('')
     const [parishName, setParishName] = useState('');
     const [category, setCategory] = useState('Parish');
@@ -26,15 +33,12 @@ const ParishAdd = () => {
     const [country, setCountry] = useState('');
     const [nearestBusStop, setNearestBusStop] = useState('');
     const [parishAddress, setParishAddress] = useState('');
+    const [selectedItem, setSelectedItem] = useState<string>('');
 
 
     // set the functions
-
     const parisshNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setParishName(e.target.value);
-    }
-    const categoryHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setCategory(e.target.value);
     }
     const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
@@ -57,10 +61,28 @@ const ParishAdd = () => {
     const ParishAddressHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setParishAddress(e.target.value);
     }
+    const handleSelect = (event: any) => {
+        setSelectedItem(event.target.value);
+    };
 
-
+    // fetch the church data from an api
+    useEffect(() => {
+        // Fetch data from API
+        const fetchData = async () => {
+          try {
+            const response = await axios.get<{ data: Church[] }>('https://projectcaasapi.azurewebsites.net/api/Church/GetAllChurch')
+            setData(response.data.data);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+    
+        fetchData();
+    }, []);
+    
     return (
         <div className={classes.add__container}>
+            {/* <p>{data.churchId}</p> */}
             
             <div className={classes.add__left}>
                 <Card>
@@ -76,7 +98,6 @@ const ParishAdd = () => {
                         />
                     </div>
                     
-                
                     <div className={classes.card__info}>
                     <div>
                         <div className={classes.title}>Name of Parish</div>
@@ -165,7 +186,7 @@ const ParishAdd = () => {
                             alt=""
                         />
                     </div>
-    
+                    {/* input fileds */}
                     <form
                         onSubmit={(e)=> {
                             e.preventDefault();
@@ -183,15 +204,32 @@ const ParishAdd = () => {
                     </div>
                     {/* th value of this category is going to be based on dynamicity */}
                     <div className={classes.form__control}>
-                        <label htmlFor="Category">Category</label>
-                        <input
-                            id="Category"
-                            type='text'
-                            placeholder='Category '
-                            value={category}
-                            onChange={categoryHandler}
-                            readOnly
-                        />
+                        <label htmlFor="Category">Church</label>
+                            <select
+                            value={selectedItem}
+                            onChange={handleSelect}
+                            style={{
+                                padding: '1rem 1.5rem',
+                                border: '1px solid gainsboro',
+                                outline: 'gray',
+                                textTransform: 'capitalize',
+                                backgroundColor: 'transparent',
+                                borderRadius: '10px',
+                                minWidth: '300px',
+                                boxShadow: '0 0 12px 0 rgba(0, 0, 0, 0.05)',
+                                //@ts-ignore
+                                '@media screen and (max-width: 300px)': {
+                                minWidth: 'auto',
+                                },
+                            }}
+                            >
+                                <option value={''}>Select Value</option>
+                                {data.map((item)=>(
+                                    <option key={item.churchId} value={item.name}>
+                                        {item.name}
+                                    </option>
+                                ))}
+                            </select>
                     </div>
                     <div className={classes.form__control}>
                         <label htmlFor="Pastor">Email Address</label>
@@ -275,11 +313,7 @@ const ParishAdd = () => {
                     </form>
                 </div>
             </Card>
-    
-    
         </div>
-    
-    
         </div>
       )
 }
