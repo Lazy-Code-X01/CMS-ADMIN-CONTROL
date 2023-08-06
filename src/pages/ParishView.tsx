@@ -1,31 +1,35 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import EditChurch from "../components/edit/EditChurch";
+import EditChurch from "../components/view/ViewParish";
 import LoadingSpinner from "../components/UI/loadingSpinner/LoadingSpinner";
 
-const ChurchEdit = () => {
+const ParishView = () => {
   const params = useParams();
   const { onboardingId } = params;
+
   console.log(onboardingId);
 
-  // State to store the fetched data and loading state
+  // State to store the fetched data, loading state, and error state
   const [churchInfo, setChurchInfo] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null); // Update the type of error state
 
   // Function to fetch data from the API
-  //@ts-ignore
+  // @ts-ignore
   async function fetchParishDetailsById(id) {
     try {
       const response = await fetch(
         `http://projectcaas.ng/api/Parish/GetParishById?id=${id}`
       );
       if (!response.ok) {
-        console.log("Failed to fetch data");
+        setError("Network Error");
+        return null;
       }
       const data = await response.json();
       return data;
     } catch (error) {
       console.error(error);
+      setError("Fetching Error");
       return null;
     }
   }
@@ -39,24 +43,28 @@ const ChurchEdit = () => {
         setLoading(false);
       } else {
         console.log("Failed to fetch data.");
-        setLoading(false); // Set loading to false even if the API call fails
+        setLoading(false);
+        setError("Failed to fetch data.")
       }
     });
   }, [onboardingId]);
 
   return (
     <section>
-      {/* <h2 className="title">Edit {churchInfo ? churchInfo.name : ""}</h2> */}
-      <h2 className="title">Edit</h2>
+      <h2 className="title">View Details</h2>
       {loading ? (
-        // Render the LoaderSpinner when loading is true
         <LoadingSpinner />
       ) : (
-        // Render EditChurch when loading is false and churchInfo is available
-        churchInfo && <EditChurch datas={churchInfo} />
+        <>
+          {error ? (
+            <p>Error: {error}</p>
+          ) : (
+            churchInfo && <EditChurch datas={churchInfo} />
+          )}
+        </>
       )}
     </section>
   );
 };
 
-export default ChurchEdit;
+export default ParishView;

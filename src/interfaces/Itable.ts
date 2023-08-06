@@ -1,38 +1,5 @@
-export interface ItopCustomers extends Object {
-  username: string;
-  order: number;
-  price: string;
-}
-
-export type TlatestTransactions = {
-  orderId: string;
-  customer: string;
-  totalPrice: string;
-  date: string;
-  status: string;
-};
-
-export interface IcustomersTable {
-  ID: number | string;
-  userName: string;
-  avatar: string;
-  email: string;
-  phoneNumber: string;
-  totalOrders: number;
-  totalSpend: string;
-  location: string;
-}
-
-export interface IProductsTable {
-  ID: number | string;
-  pic: string;
-  product: string;
-  inventory: number;
-  price: string;
-  category: string;
-}
-
 export interface IOveralTable {
+  parishId: number | string;
   id: number | string;
   pic: string;
   name: string;
@@ -40,12 +7,23 @@ export interface IOveralTable {
   city: string;
   phone: string;
   category: string;
+  ID: number | string;
+  product: string;
+  inventory: number;
+  price: string;
+  churchName: string;
+  parishLogoPath: string;
+  parishPhoneNumber: string;
+  state: string;
+  address: string;
+  email: string;
+  country: string;
+  nearestBusStop: String;
+  pastorName: String;
+  parishEmail: string;
 }
 
 export type complex =
-  // | ItopCustomers
-  // | TlatestTransactions
-  // | IcustomersTable
   | IOveralTable;
 
 export interface Itable {
@@ -53,10 +31,6 @@ export interface Itable {
   selectedCategory?: string;
   headData: string[];
   bodyData: (
-    // | ItopCustomers
-    // | TlatestTransactions
-    // | IcustomersTable
-    // | IProductsTable
     | IOveralTable
   )[];
 }

@@ -1,11 +1,10 @@
-import React from "react";
 import Summary from "../components/summary/Summary";
 import Chart from "../components/chart/Chart";
 
 function Dashboard() {
   return (
     <section>
-      <h2 className="title">{("Dashboard")}</h2>
+      <h2 className="title">{"Dashboard"}</h2>
       <Summary />
       <Chart />
     </section>

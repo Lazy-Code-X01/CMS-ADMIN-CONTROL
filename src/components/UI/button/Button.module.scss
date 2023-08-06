@@ -6,6 +6,9 @@
   padding: 0.8rem 3rem;
   cursor: pointer;
   margin: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button {
@@ -20,6 +23,10 @@
 
   &:focus {
     outline: none;
+  }
+
+  img{
+    width: 24px;
   }
 }
 

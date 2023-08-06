@@ -2,12 +2,8 @@ import images from "./images";
 
 // dummmy data for bar the chart
 
-
 const data = {
-//   user: {
-//     name: "Zahra Mirzaei",
-//     img: images.avt,
-//   },
+
   revenueByMonths: {
     labels: [
       "Jan",

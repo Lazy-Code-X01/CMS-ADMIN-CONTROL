@@ -10,9 +10,6 @@ import Input from "../UI/input/Input";
 
 const EditChurch: React.FC<{ datas?: Props }> = (props) => {
 
-    // let lol = props.data ? props.data.name : null;
-    // console.log(props.datas);
-    
   return (
     <div className={classes.edit__container}>
     
@@ -21,14 +18,15 @@ const EditChurch: React.FC<{ datas?: Props }> = (props) => {
             <div className={classes.img_wrapper}>
                 <img
                 className={classes.pic}
-                src={props.datas?.pic}
+                //@ts-ignore
+                src={props.datas?.parishLogoPath}
                 alt="church profile img"
                 />
             </div>
 
             <div className={classes.card__info}>
                 <div>
-                    <div className={classes.title}>Church Name</div>
+                    <div className={classes.title}>Parish Name</div>
                     <div className={classes.value}>
                         {`${props.datas?.name}`}
                         {/* {props.datas?.name} */}
@@ -50,16 +48,45 @@ const EditChurch: React.FC<{ datas?: Props }> = (props) => {
                 </div>
 
                 <div>
-                    <div className={classes.title}>{"City"}</div>
+                    <div className={classes.title}>{"Nearest Bus Stop"}</div>
                     <div className={classes.value}>
-                        {`${props.datas?.city}`}
+                        {`${props.datas?.nearestBusStop}`}
+                    </div>
+                </div>
+
+                <div>
+                    <div className={classes.title}>{"State"}</div>
+                    <div className={classes.value}>
+                        {`${props.datas?.state}`}
                     </div>
                 </div>
 
                 <div>
                     <div className={classes.title}>{"Contact"}</div>
                     <div className={classes.value}>
-                        {`${props.datas?.phone}`}
+                        {`${props.datas?.parishPhoneNumber}`}
+                        
+                    </div>
+                </div>
+
+                <div>
+                    <div className={classes.title}>{"Email address"}</div>
+                    <div className={classes.value}>
+                        {`${props.datas?.email}`}
+                    </div>
+                </div>
+
+                <div>
+                    <div className={classes.title}>{"Country"}</div>
+                    <div className={classes.value}>
+                        {`${props.datas?.country}`}
+                    </div>
+                </div>
+
+                <div>
+                    <div className={classes.title}>{"Addres"}</div>
+                    <div className={classes.value}>
+                        {`${props.datas?.address}`}
                     </div>
                 </div>
 
@@ -90,7 +117,7 @@ const EditChurch: React.FC<{ datas?: Props }> = (props) => {
                     </div>
                     <img
                         className={classes.pic}
-                        src={props.datas?.pic}
+                        src={props.datas?.parishLogoPath}
                         alt="church profile img"
                     />
                 </div>
@@ -116,22 +143,24 @@ const EditChurch: React.FC<{ datas?: Props }> = (props) => {
                     placeholder={props.datas?.pastor}
                 />
                 <Input
-                    id="City"
+                    id="State"
                     type="text"
-                    placeholder={props.datas?.city.toString()}
+                    placeholder={props.datas?.state}
                 />
                 <Input
                     id="Contact"
                     type="number"
-                    placeholder={props.datas?.phone.toString()}
+                    placeholder={props.datas?.parishPhoneNumber}
+                />
+                <Input
+                    id="Address"
+                    type="number"
+                    placeholder={props.datas?.address}
                 />
                 <div className={classes.btn__wrapper}>
                     <Link to="/onboarding">
                         <Button type="submit">{"Upload"}</Button>
                     </Link>
-                    {/* <Link to="/onboarding">
-                    <Button outline={true}>{"Cancel"}</Button>
-                    </Link> */}
                 </div>
                 </form>
             </div>
